@@ -1,0 +1,321 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+    color: var(--text-color);
+    font-family: var(--font-family, "IBM Plex Mono", monospace);
+    font-size: var(--font-size, 18px);
+    line-height: var(--line-height, 23.4px);
+    background-image: url(../images/cover-image-dark.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+}
+/*header starts here*/
+
+.header {
+    position: relative;
+    display: grid;
+
+    min-block-size: 668px;
+    min-height: 100vh;
+    align-items: start;
+    padding: var(--section-padding, 10px);
+}
+
+.header__theme-menu {
+    justify-items: end;
+    margin-block: 65px;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.header__theme-menu-button {
+    padding: 2px 13px;
+    border: 1px solid transparent;
+    color: var(--menu-list-color);
+    text-transform: lowercase;
+    line-height: 18px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+    border-color: var(--menu-list-color-hover);
+}
+
+.header__theme-menu-button:focus {
+    outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+    border-block-end-color: var(--menu-list-color);
+}
+
+.header__theme-menu-button_active {
+    border-color: currentColor;
+    pointer-events: none;
+}
+
+.decorated-zone {
+position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+}
+
+.decorated-zone::before {
+    top: 10px;
+    right: 10px;
+    border-block-start: 1px solid var(--decorated-zone-color);
+    border-inline-end: 1px solid var(--decorated-zone-color);
+}
+
+.decorated-zone::after {
+    bottom: 10px;
+    left: 10px;
+    border-block-end: 1px solid var(--decorated-zone-color);
+    border-inline-start: 1px solid var(--decorated-zone-color);
+}
+
+.rec {
+    position: absolute;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--decorated-zone-color);
+    top: 10px;
+    right: 19px;
+    gap: 10px;
+}
+
+.rec::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--decorated-zone-color);
+    background-color: var(--decorated-zone-color);
+}
+
+.page_title {
+
+    color: var(--title-color);
+    font-weight: 700;
+    line-height: 95.7px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0 var(--decor-color);
+}
+
+.header_text {
+    align-items: center;
+    justify-self: end;
+    max-inline-size: 365px;
+    margin-block: 55px;
+}
+
+.title_decor {
+    color: var(--title-decor-color);
+    background-color: var(--title-shadow-decor-color);
+    font-weight: 700;
+    font-size: 18px;
+}
+/*header ends here*/
+
+/*links start here*/
+.link_effects {
+    text-decoration: none;
+    text-shadow: 2px 2px 0 #ff0070;
+}
+
+.link_effects:hover {
+    text-decoration: underline;
+}
+
+.link_effects:focus {
+    outline: 0;
+}
+
+.link_effects:focus-visible {
+    outline: 1px solid currentColor;
+}
+
+/*links end here*/
+
+.main {
+    display: grid;
+    gap: 50px;
+    padding: 40px 10px;
+}
+
+/*section starts here*/
+
+.section {
+    display: grid;
+    gap: 20px;
+}
+
+.sec_pictures {
+    gap: 10px;
+}
+
+.section_title {
+    color: var(--accent-color);
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+}
+
+.sec_how_title {
+    margin-block-end: 20px;
+}
+
+.articles_list {
+    display: grid;
+    gap: 10px;
+}
+
+.article {
+    display: grid;
+    gap: 10px;
+}
+
+.sec_pictures_list {
+    display: grid;
+    gap: 10px;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.main_picture_item {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+/*footer starts here*/
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 668px;
+    height: 100vh;
+}
+
+/*footer ends here*/
+
+@media (width >= 768px) {
+    .header {
+        padding: 20px;
+    }
+
+    .rec {
+        inset-block-start: 20px;
+        inset-inline-end: 28px;
+    }
+
+    .header__theme-menu {
+        margin-block-start: 172px;
+        margin-block-end: 70px;
+    }
+
+    .decorated-zone::before {
+        top: 20px;
+        right: 20px;
+    }
+
+    .decorated-zone::after {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .page_title {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+
+    .page_title_header {
+        margin-left: -20px;
+        justify-self: start;
+    }
+
+    .main {
+        gap: 80px;
+        padding: 60px 20px;
+    }
+
+    .section {
+        grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+    }
+
+    .sec_what_articles_list {
+        grid-column-start: span 2;
+    }
+
+    .sec_pictures {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sec_pictures_list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .sec_pictures_list_item:first-child,
+    .sec_pictures_list_item:last-child {
+        grid-column-start: span 2;
+    }
+
+    .sec_pictures_list_item:nth-child(2),
+    .sec_pictures_list_item:nth-child(3) {
+        grid-row-start: span 2;
+    }
+}
+
+@media (width >= 1024px) {
+    .page_title {
+        text-shadow: 4px 4px 0 var(--color-pink-1, #ff0070);
+    }
+
+    .header_text {
+        max-inline-size: 491px;
+    }
+
+    .header__theme-menu {
+        margin-block-start: 0px;
+        margin-block-end: 215px;
+        margin-inline-start: 20px;
+        justify-self: center;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: row;
+    }
+
+    .section {
+        column-gap: 30px;
+    }
+
+    .sec_what_articles_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

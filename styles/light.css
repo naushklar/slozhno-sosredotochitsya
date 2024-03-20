@@ -1,0 +1,54 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light {
+    --text-color: var(--color-black-1, #353430);
+    --menu-list-color: var(--color-black-1, #353430);
+    --menu-list-color-hover: #32312D66;
+    --title-color: var(--color-pink-4, #FFC2E6);
+    --accent-color: var(--color-black-1, #353430);
+    --decor-color: var(--color-pink-1, #FF0070);
+    --decorated-zone-color: var(--color-black-1, #353430);
+    --title-shadow-decor-color: var(--color-pink-3, #FF8DCB);
+    --background-color: var(--color-black-2-background, #000028);
+    --title-decor-color: var(--color-black-1, #353430);
+    --button-color-pink: var(--color-pink-1, #FF0070);
+
+background-image: url(../images/cover-image-light.png);
+background-color: var(--color-pink-5-background, #FFF1F7);
+.rec {
+  display: none;
+  }
+
+.link_effects {
+text-shadow: 2px 2px 0 var(--color-pink-2, #F1B2CE);
+}
+}
+@media (prefers-color-scheme: light) {
+:root {
+--text-color: var(--color-black-1, #353430);
+    --menu-list-color: var(--color-black-1, #353430);
+    --menu-list-color-hover: #32312D66;
+    --title-color: var(--color-pink-4, #FFC2E6);
+    --accent-color: var(--color-black-1, #353430);
+    --decor-color: var(--color-pink-1, #FF0070);
+    --decorated-zone-color: var(--color-black-1, #353430);
+    --title-shadow-decor-color: var(--color-pink-3, #FF8DCB);
+    --background-color: var(--color-black-2-background, #000028);
+    --title-decor-color: var(--color-black-1, #353430);
+    --button-color-pink: var(--color-pink-1, #FF0070);
+
+background-image: url(../images/cover-image-light.png);
+background-color: var(--color-pink-5-background, #FFF1F7);
+.rec {
+  visibility: hidden;
+  }
+}
+
+.link_effects {
+text-shadow: 2px 2px 0 var(--color-pink-2, #F1B2CE);
+}
+}

@@ -1,0 +1,40 @@
+:root {
+    --color-pink-1: #FF0070;
+    --color-pink-1-hover: #FF007066;
+    --color-pink-2: #F1B2CE;
+    --color-pink-3: #FF8DCB;
+    --color-pink-4: #FFC2E6;
+    --color-pink-5-background: #FFF1F7;
+
+    --button-color-pink: rgb (255,0,112, 0.4);
+
+    --color-black-1: #353430;
+    --color-black-2-background: #000028;
+
+    --color-purple-1: #DB00FF;
+
+    --text-color: var(--color-pink-2,#F1B2CE);
+    --menu-list-color: var(--color-pink-1, #FF0070);
+    --menu-list-color-hover: var(--color-pink-1-hover, #FF007066);
+    --title-color: var(--color-purple-1,#DB00FF);
+    --accent-color: var(--color-pink-1, #FF0070);
+    --decor-color: var(--color-pink-1, #FF0070);
+    --decorated-zone-color: var(--color-pink-1, #FF0070);
+    --title-shadow-decor-color: var(--color-pink-1, #FF0070);
+    --background-color: var(--color-black-2-background, #000028);
+    --title-decor-color: var(--color-black-2-background, #000028);
+
+
+    --font-family: "IBM Plex Mono", monospace;
+    --font-size: 18px;
+    --line-height: 23.4px;
+
+    --section-gap: 50px;
+    --main-padding: 40px;
+    --section-padding: 10px;
+    --no-focus-bottom: 55px;
+    --no-focus-top: 65px;
+
+    --rec-display: none;
+
+}
